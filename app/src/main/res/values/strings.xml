@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Ten Twenty</string>
+    <string name="please_wait">Please Wait…</string>
+    <string name="book">Book</string>
+    <string name="adult">Adult</string>
+    <string name="non_adult">Non Adult</string>
+    <string name="back">Back</string>
+    <string name="api_key">AIzaSyBhTHu0sKi_eNgHAitej-HUhHcPlxOjU64</string>
+    <string name="done">Done</string>
+    <string name="watch_trailer">Watch Trailer</string>
+    <string name="date">Date</string>
+    <string name="genres">Genres</string>
+    <string name="upcoming_movies">Up Coming Movies</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="enter_cinema">Enter Cinema</string>
+    <string name="enter_seat_no">Enter Seat No</string>
+    <string name="movie_booking">Movie Booking</string>
+</resources>

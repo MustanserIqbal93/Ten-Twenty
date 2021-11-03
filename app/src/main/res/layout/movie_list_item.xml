@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.tentwenty.assignment.model.Movie" />
+        <variable
+            name="movieItemClick"
+            type="com.tentwenty.assignment.view.adapter.MoviesAdapter.MovieItemClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:onClick="@{() ->  movieItemClick.onMovieItemClicked(movie)}"
+        app:cardElevation="@dimen/_6sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/moviePoster"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent=".3"
+                android:layout_height="@dimen/_110sdp"
+                app:moviePoster="@{movie.poster_path}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/movieTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:textStyle="bold"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="@{movie.title}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moviePoster"/>
+
+            <TextView
+                android:id="@+id/releaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="@{movie.release_date}"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moviePoster"
+                app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+
+            <TextView
+                android:id="@+id/suggestedAge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:paddingStart="@dimen/_4sdp"
+                android:paddingEnd="@dimen/_4sdp"
+                android:paddingBottom="@dimen/_2sdp"
+                android:text="@{movie.adult? @string/adult : @string/non_adult}"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/moviePoster"
+                app:layout_constraintTop_toBottomOf="@+id/releaseDate"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/book_btn_bg"
+                android:text="@string/book"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:onClick="@{() ->  movieItemClick.onBookingClicked(movie)}"
+                app:layout_constraintTop_toBottomOf="@+id/movieTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

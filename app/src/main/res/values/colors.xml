@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#032541</color>
+    <color name="purple_500">#032541</color>
+    <color name="purple_700">#032541</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="recycler_bg">#FAF9F7</color>
+    <color name="grey_light">#688493</color>
+    <color name="black">#FF000000</color>
+    <color name="black_ligt">#333333</color>
+    <color name="pink">#e91e63</color>
+
+    <color name="black_transparent">#AE0C0C0C</color>
+    <color name="progress_color">#D5D1D1</color>
+</resources>
